@@ -2,7 +2,7 @@
 
 namespace PurpleBooth;
 
-class HtmlStripper extends \Twig_Extension
+class HtmlStripperExtension extends \Twig_Extension
 {
     public function getFilters()
     {

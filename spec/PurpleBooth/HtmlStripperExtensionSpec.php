@@ -5,11 +5,11 @@ namespace spec\PurpleBooth;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
-class HtmlStripperSpec extends ObjectBehavior
+class HtmlStripperExtensionSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType('PurpleBooth\HtmlStripper');
+        $this->shouldHaveType('PurpleBooth\HtmlStripperExtension');
     }
 
     function it_has_a_name()
