@@ -1,7 +1,6 @@
 {
     "name": "purplebooth/twig-htmlstrip",
     "description": "Strip the html from some",
-    "version" : "1.0.0",
     "require": {
         "twig/twig": ">=1.12"
     },
