@@ -3,7 +3,7 @@ twig-htmlstrip
 
 Filter for Twig to convert HTML into Text
 
-Build Status: [![Build Status](https://travis-ci.org/PurpleBooth/twig-htmlstrip?branch=master)](https://travis-ci.org/PurpleBooth/twig-htmlstrip)
+Build Status: [![Build Status](https://travis-ci.org/PurpleBooth/twig-htmlstrip.png)](https://travis-ci.org/PurpleBooth/twig-htmlstrip)
 
 To use:
 
