@@ -5,7 +5,8 @@ Filter for Twig to convert HTML into Text
 
 Build Status: [![Build Status](https://travis-ci.org/PurpleBooth/twig-htmlstrip.png?branch=master)](https://travis-ci.org/PurpleBooth/twig-htmlstrip)
 
-To use:
+How To Use
+----------
 
 Add the dependency to your composer.json
 ```bash
