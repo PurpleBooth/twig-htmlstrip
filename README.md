@@ -9,7 +9,7 @@ To use:
 
 Add the dependency to your composer.json
 ```bash
-php composer.phar require purplebooth/twig-htmlstrip:*
+php composer.phar require purplebooth/twig-htmlstrip:dev-master
 ```
 
 Add a service which points to the class, and tag it with the twig.extension tag.
