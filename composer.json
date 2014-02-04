@@ -1,0 +1,25 @@
+{
+    "name": "purplebooth/twig-htmlstrip",
+    "description": "Strip the html from some",
+    "require": {
+        "twig/twig": ">=1.12"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "2.0.*@dev"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Billie Alice Thompson",
+            "email": "billie@billiecodes.com"
+        }
+    ]
+}
