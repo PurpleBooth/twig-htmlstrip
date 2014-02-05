@@ -1,7 +1,7 @@
 twig-htmlstrip
 ==============
 
-Filter for Twig to convert HTML into Text
+Filter for Twig to convert a small subset of html into something reasonable you can put in plain text email, or SMS.
 
 Build Status: [![Build Status](https://travis-ci.org/PurpleBooth/twig-htmlstrip.png?branch=master)](https://travis-ci.org/PurpleBooth/twig-htmlstrip)
 
