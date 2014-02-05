@@ -42,6 +42,16 @@ Hello, world.
 
 Input:
 ```html
+<a href="http://pleasestopbeingsad.tumblr.com/">Quote source</a>
+```
+
+Output:
+```
+Quote source (http://pleasestopbeingsad.tumblr.com/)
+```
+
+Input:
+```html
 <ul>
     <li>You're a good person</li>
     <li>Don't be too hard on yourself</li>
