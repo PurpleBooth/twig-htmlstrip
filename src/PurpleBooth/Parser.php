@@ -6,19 +6,23 @@ namespace PurpleBooth;
 class Parser {
 
     private $text = "";
-    private $currentBlockStack;
+    private $transformedTextStack;
+    private $blockTypeStack;
+    private $blockAttributesStack;
 
     public function __construct() {
-        $this->currentBlockStack = new \SplStack();
+        $this->transformedTextStack = new \SplStack();
+        $this->blockTypeStack = new \SplStack();
+        $this->blockAttributesStack = new \SplStack();
     }
 
     public function startElement($parser, $name, $attrs)
     {
-        $this->blockBegin();
+        $this->blockBegin($name, $attrs);
 
         switch($name) {
             case "LI":
-                $this->appendToCurrentBlock("* ");
+                $this->appendBlockText("* ");
                 break;
         }
     }
@@ -27,23 +31,29 @@ class Parser {
     {
         switch($name) {
             case "P":
-                $this->appendToCurrentBlock("\n\n");
+                $this->appendBlockText("\n\n");
                 break;
             case "UL":
-                $this->appendToCurrentBlock("\n\n");
+                $this->appendBlockText("\n\n");
                 break;
             case "LI":
-                $this->appendToCurrentBlock("\n");
+                $this->appendBlockText("\n");
                 break;
             case "DIV":
-                $this->appendToCurrentBlock("\n\n\n");
+                $this->appendBlockText("\n\n\n");
                 break;
+            case "A":
+                $attrs = $this->blockAttributesStack->top();
+
+                if(isset($attrs['HREF'])) {
+                    $this->appendBlockText(" ({$attrs['HREF']})");
+                }
         }
 
         $blockContent = $this->blockFinished();
 
-        if(count($this->currentBlockStack)) {
-            $this->appendToCurrentBlock($blockContent);
+        if(count($this->transformedTextStack)) {
+            $this->appendBlockText($blockContent);
         }
         else {
             $this->text .= $blockContent;
@@ -52,7 +62,7 @@ class Parser {
 
     public function characterData($parser, $data)
     {
-        $this->appendToCurrentBlock(str_replace("\n", " ", $data));
+        $this->appendBlockText(str_replace("\n", " ", $data));
     }
 
     public function getText() {
@@ -62,24 +72,28 @@ class Parser {
         return implode("\n", array_map("trim", $lines));
     }
 
-    private function appendToCurrentBlock($value) {
-        $this->setCurrentBlock($this->getCurrentBlock() . $value);
+    private function appendBlockText($value) {
+        $this->setBlockText($this->getBlockText() . $value);
     }
 
-    private function setCurrentBlock($value) {
-        $this->currentBlockStack->pop();
-        $this->currentBlockStack->push($value);
+    private function setBlockText($value) {
+        $this->transformedTextStack->pop();
+        $this->transformedTextStack->push($value);
     }
 
-    private function getCurrentBlock() {
-        return $this->currentBlockStack->top();
+    private function getBlockText() {
+        return $this->transformedTextStack->top();
     }
 
-    private function blockBegin() {
-        $this->currentBlockStack->push("");
+    private function blockBegin($name, $attributes) {
+        $this->transformedTextStack->push("");
+        $this->blockTypeStack->push($name);
+        $this->blockAttributesStack->push($attributes);
     }
 
     private function blockFinished() {
-        return $this->currentBlockStack->pop();
+        return $this->transformedTextStack->pop();
+        return $this->blockTypeStack->pop();
+        return $this->blockAttributesStack->pop();
     }
 } 

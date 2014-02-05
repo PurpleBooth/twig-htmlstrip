@@ -21,6 +21,10 @@ class HtmlStripperExtensionSpec extends ObjectBehavior
         $this->toText("<p>Hello, world.</p>")->shouldReturn("Hello, world.");
     }
 
+    function it_converts_links_to_txt() {
+        $this->toText("<a href=\"http://pleasestopbeingsad.tumblr.com/\">Quote source</a>")->shouldReturn("Quote source (http://pleasestopbeingsad.tumblr.com/)");
+    }
+
     function it_converts_ul_to_txt() {
         $html = <<<HTML
 <ul>
