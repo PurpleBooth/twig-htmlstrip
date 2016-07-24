@@ -3,7 +3,9 @@ twig-htmlstrip
 
 Filter for Twig to convert a small subset of html into something reasonable you can put in plain text email, or SMS.
 
-Build Status: [![Build Status](https://travis-ci.org/PurpleBooth/twig-htmlstrip.png?branch=master)](https://travis-ci.org/PurpleBooth/twig-htmlstrip)
+[![Build Status](https://travis-ci.org/PurpleBooth/twig-htmlstrip.svg?branch=master)](https://travis-ci.org/PurpleBooth/twig-htmlstrip)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/PurpleBooth/twig-htmlstrip/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PurpleBooth/twig-htmlstrip/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/PurpleBooth/twig-htmlstrip/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/PurpleBooth/twig-htmlstrip/?branch=master)
 
 How To Use
 ----------

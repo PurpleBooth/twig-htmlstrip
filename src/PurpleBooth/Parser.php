@@ -3,14 +3,16 @@
 namespace PurpleBooth;
 
 
-class Parser {
+class Parser
+{
 
     private $text = "";
     private $transformedTextStack;
     private $blockTypeStack;
     private $blockAttributesStack;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->transformedTextStack = new \SplStack();
         $this->blockTypeStack = new \SplStack();
         $this->blockAttributesStack = new \SplStack();
@@ -20,7 +22,7 @@ class Parser {
     {
         $this->blockBegin($name, $attrs);
 
-        switch($name) {
+        switch ($name) {
             case "LI":
                 $this->appendBlockText("* ");
                 break;
@@ -29,7 +31,7 @@ class Parser {
 
     public function endElement($parser, $name)
     {
-        switch($name) {
+        switch ($name) {
             case "P":
                 $this->appendBlockText("\n\n");
                 break;
@@ -45,17 +47,16 @@ class Parser {
             case "A":
                 $attrs = $this->blockAttributesStack->top();
 
-                if(isset($attrs['HREF'])) {
+                if (isset($attrs['HREF'])) {
                     $this->appendBlockText(" ({$attrs['HREF']})");
                 }
         }
 
         $blockContent = $this->blockFinished();
 
-        if(count($this->transformedTextStack)) {
+        if (count($this->transformedTextStack)) {
             $this->appendBlockText($blockContent);
-        }
-        else {
+        } else {
             $this->text .= $blockContent;
         }
     }
@@ -76,6 +77,9 @@ class Parser {
         $this->setBlockText($this->getBlockText() . $value);
     }
 
+    /**
+     * @param string $value
+     */
     private function setBlockText($value) {
         $this->transformedTextStack->pop();
         $this->transformedTextStack->push($value);
