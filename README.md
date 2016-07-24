@@ -30,11 +30,6 @@ And use it
 {{ yourhtml|html_strip }}
 ```
 
-Versioning
-----------
-
-We use [semver](http://semver.org/). See the [releases](https://github.com/PurpleBooth/twig-htmlstrip/releases) for a changelog and versions
-
 Examples
 --------
 Input:
@@ -127,3 +122,13 @@ Hello
 
 Fin.
 ```
+
+Related
+-------
+
+* [Stand alone library](https://github.com/PurpleBooth/htmlstrip)
+
+Versioning
+----------
+
+We use [semver](http://semver.org/). See the [releases](https://github.com/PurpleBooth/twig-htmlstrip/releases) for a changelog and versions
