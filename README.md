@@ -6,6 +6,11 @@ Filter for Twig to convert a small subset of html into something reasonable you 
 [![Build Status](https://travis-ci.org/PurpleBooth/twig-htmlstrip.svg?branch=master)](https://travis-ci.org/PurpleBooth/twig-htmlstrip)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/PurpleBooth/twig-htmlstrip/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PurpleBooth/twig-htmlstrip/?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/PurpleBooth/twig-htmlstrip/badge.svg?branch=master)](https://coveralls.io/github/PurpleBooth/twig-htmlstrip?branch=master)
+[![Dependency Status](https://www.versioneye.com/user/projects/57952469b4e86c0037c9fcb6/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/57952469b4e86c0037c9fcb6)
+[![Latest Stable Version](https://poser.pugx.org/purplebooth/twig-htmlstrip/v/stable)](https://packagist.org/packages/purplebooth/twig-htmlstrip)
+[![Total Downloads](https://poser.pugx.org/purplebooth/twig-htmlstrip/downloads)](https://packagist.org/packages/purplebooth/twig-htmlstrip)
+[![License](https://poser.pugx.org/purplebooth/twig-htmlstrip/license)](https://packagist.org/packages/purplebooth/twig-htmlstrip)
+
 How To Use
 ----------
 
