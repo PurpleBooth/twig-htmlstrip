@@ -12,7 +12,7 @@ How To Use
 
 Add the dependency to your composer.json
 ```bash
-php composer.phar require purplebooth/twig-htmlstrip:dev-master
+php composer.phar require purplebooth/twig-htmlstrip:^1.0.0
 ```
 
 Add a service which points to the class, and tag it with the twig.extension tag.
@@ -29,6 +29,11 @@ And use it
 ```twig
 {{ yourhtml|html_strip }}
 ```
+
+Versioning
+----------
+
+We use [semver](http://semver.org/). See the [releases](https://github.com/PurpleBooth/twig-htmlstrip/releases) for a changelog and versions
 
 Examples
 --------
