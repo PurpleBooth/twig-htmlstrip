@@ -2,7 +2,7 @@
     "name": "purplebooth/twig-htmlstrip",
     "description": "Convert a small subset of html into something reasonable you can put in plain text email, or SMS.",
     "require": {
-        "twig/twig": ">=1.12"
+        "twig/twig": "^1.12.0"
     },
     "require-dev": {
         "phpspec/phpspec": "2.0.*@dev"
