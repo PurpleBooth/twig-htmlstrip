@@ -3,7 +3,8 @@
     "description": "Convert a small subset of html into something reasonable you can put in plain text email, or SMS.",
     "require": {
         "twig/twig": "^1.12.0",
-        "purplebooth/htmlstrip": "^1.0.0"
+        "purplebooth/htmlstrip": "^1.0.0",
+        "satooshi/php-coveralls": "^1.0"
     },
     "require-dev": {
         "phpspec/phpspec": "2.0.*@dev",

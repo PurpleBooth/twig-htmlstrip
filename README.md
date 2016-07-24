@@ -5,8 +5,7 @@ Filter for Twig to convert a small subset of html into something reasonable you 
 
 [![Build Status](https://travis-ci.org/PurpleBooth/twig-htmlstrip.svg?branch=master)](https://travis-ci.org/PurpleBooth/twig-htmlstrip)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/PurpleBooth/twig-htmlstrip/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/PurpleBooth/twig-htmlstrip/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/PurpleBooth/twig-htmlstrip/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/PurpleBooth/twig-htmlstrip/?branch=master)
-
+[![Coverage Status](https://coveralls.io/repos/github/PurpleBooth/twig-htmlstrip/badge.svg?branch=master)](https://coveralls.io/github/PurpleBooth/twig-htmlstrip?branch=master)
 How To Use
 ----------
 

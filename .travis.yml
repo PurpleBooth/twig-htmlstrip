@@ -12,3 +12,6 @@ before_script:
 
 script:
   - bin/phpspec run
+
+after_success:
+  - travis_retry php bin/coveralls
