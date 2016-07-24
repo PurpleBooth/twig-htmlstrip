@@ -9,6 +9,21 @@ namespace PurpleBooth;
  */
 class HtmlStripperExtension extends \Twig_Extension
 {
+
+    /**
+     * @var HtmlStripper
+     */
+    private $htmlStripper;
+
+    /**
+     * HtmlStripperExtension constructor.
+     */
+    public function __construct()
+    {
+        $this->htmlStripper = new HtmlStripperImplementation();
+    }
+
+
     /**
      * This gets an array of the filters that this extension provides
      *
@@ -17,7 +32,7 @@ class HtmlStripperExtension extends \Twig_Extension
     public function getFilters()
     {
         return [
-            new \Twig_SimpleFilter('html_strip', [$this, 'toText']),
+            new \Twig_SimpleFilter('html_strip', [$this->htmlStripper, 'toText']),
         ];
     }
 
@@ -34,25 +49,15 @@ class HtmlStripperExtension extends \Twig_Extension
     /**
      * This is the extension itself, it's mostly a small wrapper around the actual parser.
      *
+     * @see        https://github.com/PurpleBooth/htmlstrip
+     * @deprecated v1.1.0 This will be removed in the future, please use the PurpleBooth/htmlstrip library
+     *
      * @param string $html
      *
      * @return string
      */
     public function toText($html)
     {
-        $parser = new Parser();
-
-        $xmlParser = xml_parser_create();
-        xml_set_element_handler($xmlParser, [$parser, 'startElement'], [$parser, 'endElement']);
-        xml_set_character_data_handler($xmlParser, [$parser, 'characterData']);
-
-        $wrappedHtml  = "<root>$html</root>";
-        $returnStatus = xml_parse($xmlParser, $wrappedHtml, true);
-
-        if (!$returnStatus) {
-            return $html;
-        }
-
-        return $parser->getText();
+        return $this->htmlStripper->toText($html);
     }
 }
