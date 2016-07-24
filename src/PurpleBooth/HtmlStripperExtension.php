@@ -11,7 +11,8 @@ class HtmlStripperExtension extends \Twig_Extension
         );
     }
 
-    public function getName() {
+    public function getName()
+    {
         return "html_stripper";
     }
 
@@ -26,7 +27,7 @@ class HtmlStripperExtension extends \Twig_Extension
         $wrappedHtml = "<root>$html</root>";
         $returnStatus = xml_parse($xml_parser, $wrappedHtml, true);
 
-        if(!$returnStatus) {
+        if (!$returnStatus) {
             return $html;
         }
 
