@@ -8,6 +8,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 * This changelog
 
+### Changed
+
+* License is now markdown
+
 ### Fixed
 
 * versioneye.com link was wrong in README.
