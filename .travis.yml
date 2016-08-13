@@ -1,14 +1,20 @@
 language: php
 
 php:
-  - '5.4'
-  - '5.5'
-  - '5.6'
-  - '7.0'
+  - 5.4
+  - 5.5
+  - 5.6
+  - 7.0
   - nightly
 
-before_script:
-  - composer install
+matrix:
+  fast_finish: true
+  include:
+    - php: 5.4
+      env: COMPOSER_FLAGS="--prefer-stable --prefer-lowest"
+
+install:
+  - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction
 
 script:
   - bin/phpspec run
