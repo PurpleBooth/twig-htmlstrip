@@ -3,13 +3,10 @@
 namespace PurpleBooth;
 
 /**
- * This is sets up the twig extension
- *
- * @package PurpleBooth
+ * This is sets up the twig extension.
  */
 class HtmlStripperExtension extends \Twig_Extension
 {
-
     /**
      * @var HtmlStripper
      */
@@ -23,9 +20,8 @@ class HtmlStripperExtension extends \Twig_Extension
         $this->htmlStripper = new HtmlStripperImplementation();
     }
 
-
     /**
-     * This gets an array of the filters that this extension provides
+     * This gets an array of the filters that this extension provides.
      *
      * @return \Twig_SimpleFilter[]
      */
@@ -37,13 +33,13 @@ class HtmlStripperExtension extends \Twig_Extension
     }
 
     /**
-     * A convenient name for this extension
+     * A convenient name for this extension.
      *
      * @return string
      */
     public function getName()
     {
-        return "html_stripper";
+        return 'html_stripper';
     }
 
     /**
