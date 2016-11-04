@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [1.1.2]
 ### Added
 
 * This changelog
@@ -11,10 +11,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 * License is now markdown
+* Coveralls is now a dev dependency
 
 ### Fixed
 
 * versioneye.com link was wrong in README.
+* Fix the build
+* Test against more versions of PHP
 
 ## [1.1.1] - 2016-07-24
 
@@ -92,7 +95,7 @@ Has support for
 * Lists
 * Block Quotes
 
-[Unreleased]: https://github.com/PurpleBooth/twig-htmlstrip/compare/v1.1.1...HEAD
+[1.1.2]: https://github.com/PurpleBooth/twig-htmlstrip/compare/v1.1.1...v1.1.2
 [1.1.1]: https://github.com/PurpleBooth/twig-htmlstrip/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/PurpleBooth/twig-htmlstrip/compare/v1.0.2...v1.1.0
 [1.0.2]: https://github.com/PurpleBooth/twig-htmlstrip/compare/v1.0.1...v1.0.2
