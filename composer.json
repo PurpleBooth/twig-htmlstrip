@@ -1,29 +1,39 @@
 {
-    "name": "purplebooth/twig-htmlstrip",
-    "description": "Convert a small subset of html into something reasonable you can put in plain text email, or SMS.",
-    "require": {
-        "twig/twig": "^1.12.0",
-        "purplebooth/htmlstrip": "^1.0.0"
-    },
-    "require-dev": {
-        "phpspec/phpspec": "2.0.*@dev",
-        "henrikbjorn/phpspec-code-coverage": "^2.1",
-        "sllh/php-cs-fixer-styleci-bridge": "^2.1",
-        "satooshi/php-coveralls": "^1.0"
-    },
-    "config": {
-        "bin-dir": "bin"
-    },
-    "autoload": {
-        "psr-0": {
-            "": "src"
-        }
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Billie Alice Thompson",
-            "email": "billie@billiecodes.com"
-        }
+  "name": "purplebooth/twig-htmlstrip",
+  "description": "Convert a small subset of html into something reasonable you can put in plain text email, or SMS.",
+  "require": {
+    "twig/twig": "^1.12.0|^2.0.0",
+    "purplebooth/htmlstrip": "^1.0.0"
+  },
+  "require-dev": {
+    "phpspec/phpspec": "2.0.*@dev",
+    "henrikbjorn/phpspec-code-coverage": "^2.1",
+    "sllh/php-cs-fixer-styleci-bridge": "^2.1",
+    "satooshi/php-coveralls": "^1.0"
+  },
+  "scripts": {
+    "test": [
+      "@composer validate --ansi --no-interaction",
+      "./example/example.php > /dev/null",
+      "phpspec --ansi --no-interaction run"
     ]
+  },
+  "config": {
+    "bin-dir": "bin",
+    "optimize-autoloader": true,
+    "sort-packages": true,
+    "apcu-autoloader": true
+  },
+  "autoload": {
+    "psr-0": {
+      "": "src"
+    }
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Billie Alice Thompson",
+      "email": "billie@billiecodes.com"
+    }
+  ]
 }

@@ -1,5 +1,7 @@
 preset: symfony
 
+risky: true
+
 finder:
   exclude:
     - bin
